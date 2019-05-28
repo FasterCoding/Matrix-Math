@@ -1,0 +1,26 @@
+@startuml
+
+package FasterCodingMatrixLibrary <<Frame>> {
+
+class Matrix {
+    - _matrix: std::vector<vector<int>>
+
+    + Matrix(std::vector<std::vector<int>>)
+    + ~Matrix()
+    + operator*(Matrix& matrix): Matrix*
+    + operator*(Vector& vector): Vector*
+    + getWidth(): int
+    + getHeight(): int
+}
+
+class Vector {
+    - _vector: vector<int>
+
+    + Vector(std::vector<int>)
+    + ~Vector()
+    + getSize(): int
+}
+
+}
+
+@enduml
