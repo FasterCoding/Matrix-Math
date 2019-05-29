@@ -1,16 +1,20 @@
-@startuml
+@startuml FasterCodingMatrixLibrary
 
 package FasterCodingMatrixLibrary <<Frame>> {
 
 class Matrix {
     - _matrix: std::vector<vector<int>>
 
-    + Matrix(std::vector<std::vector<int>>)
+    + Matrix(int width, int height)
+    + Matrix(std::vector<std::vector<int>> matrix)
     + ~Matrix()
     + operator*(Matrix& matrix): Matrix*
     + operator*(Vector& vector): Vector*
-    + getWidth(): int
-    + getHeight(): int
+    + getValueAt(int& x, int& y): int
+    + setValueAt(int& x, int& y, int& value): void
+    + getWidth(): size_t
+    + getHeight(): size_t
+    + print(): void
 }
 
 class Vector {
@@ -18,7 +22,7 @@ class Vector {
 
     + Vector(std::vector<int>)
     + ~Vector()
-    + getSize(): int
+    + getSize(): size_t
 }
 
 }
