@@ -1,5 +1,5 @@
-#ifndef __MATRIX__
-#define __MATRIX__
+#ifndef __MATRIX_H_
+#define __MATRIX_H_
 
 #include <iostream>
 #include <vector>
@@ -16,7 +16,7 @@ public:
     Matrix(std::vector<std::vector<int>> matrix);
     ~Matrix();
 
-    Matrix* operator*(Matrix& matrix);
+    Matrix operator*(Matrix& matrix);
 
     int getValueAt(int& x, int& y);
     void setValueAt(int& x, int& y, int& value);

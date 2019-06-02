@@ -15,13 +15,13 @@ int main(int argc, char const *argv[]) {
     Matrix matrixA(matrixDefinitionA);
     Matrix matrixB(matrixDefinitionB);
 
-    Matrix* matrixC = matrixA * matrixB;
+    Matrix matrixC = matrixA * matrixB;
 
     matrixA.print();
     std::cout << " * " << std::endl;
     matrixB.print();
     std::cout << " = " << std::endl;
-    matrixC->print(); 
+    matrixC.print(); 
 
     return 0;
 }
