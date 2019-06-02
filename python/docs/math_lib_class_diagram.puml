@@ -1,0 +1,28 @@
+@startuml FasterCodingMatrixLibrary
+
+package FasterCodingMatrixLibrary <<Frame>> {
+
+class Matrix {
+    - _matrix: int[][]
+
+    + Matrix(self, width, height)
+    + multiplyWithMatrix(self, matrix): Matrix
+    + multiplyWithVector(self, vector): Vector
+    + getValueAt(self, x, y): int
+    + setValueAt(self, x, y, value): void
+    + getWidth(self): int
+    + getHeight(self): int
+    + setMatrix(self, matrix): void
+    + print(self): void
+}
+
+class Vector {
+    - _vector: int[]
+
+    + Vector(self, vector)
+    + getSize(self): int
+}
+
+}
+
+@enduml
