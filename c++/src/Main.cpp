@@ -2,9 +2,19 @@
 #include <vector>
 
 #include "Matrix/Matrix.hpp"
+#include "Vector/Vector.hpp"
 
 int main(int argc, char const *argv[]) {
+
+    std::cout << "=== Vector ===" << std::endl;
     
+    std::vector<int> vectorDefinitionA = {1, 2, 3};
+
+    Vector vectorA(vectorDefinitionA);
+    vectorA.print();
+    
+    std::cout << "=== Matrix ===" << std::endl;
+
     std::vector<std::vector<int>> matrixDefinitionA = {{5, 6, 9},
                                                         {7, 8, 9}};
 
