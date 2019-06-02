@@ -16,13 +16,14 @@ all: $(BIN)
 	./$(BIN)
 
 MatrixMath: $(OBJ)
-	@[ ! -d $(BINDIR) ] && mkdir -p $(BINDIR)
+	@mkdir -p $(BINDIR)
+	@echo "Linking..."
 	@$(CC) -o $(BINDIR)/$@ $^ $(LDFLAGS)
 
-$(BUILDDIR)/%.o: $(SRCDIR)/%.cpp  
-	@[ ! -d $(dir $@) ] && mkdir -p $(dir $@)
-	@$(CC) -o $@ -c $< $(CFLAGS)
+$(BUILDDIR)/%.o: $(SRCDIR)/%.cpp 
+	@mkdir -p $(dir $@)
 	@echo "Compiling $<"
+	@$(CC) -o $@ -c $< $(CFLAGS)
 
 .PHONY: clean
 clean:
