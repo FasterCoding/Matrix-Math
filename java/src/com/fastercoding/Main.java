@@ -7,11 +7,11 @@ public class Main {
     public static void main(String[] args) {
 
         int[][] matrixDefinitionA = {{5, 6, 9},
-                           {7, 8, 9}};
+                                     {7, 8, 9}};
 
         int[][] matrixDefinitionB = {{10, 15},
-                           {22, 28},
-                           {15, 15}};
+                                     {22, 28},
+                                     {15, 15}};
         
         Matrix matrixA = new Matrix(matrixDefinitionA);
         Matrix matrixB = new Matrix(matrixDefinitionB);
