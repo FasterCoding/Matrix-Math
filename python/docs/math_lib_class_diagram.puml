@@ -19,7 +19,10 @@ class Matrix {
 class Vector {
     - _vector: int[]
 
-    + Vector(self, vector)
+    + Vector(self, width)
+    + setVector(self, vector)
+    + getValueAt(self, x): int
+    + setValueAt(self, x, value): void
     + getSize(self): int
 }
 

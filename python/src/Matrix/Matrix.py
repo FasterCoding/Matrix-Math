@@ -1,3 +1,5 @@
+from .Vector.Vector import Vector
+
 class Matrix():
     
     def __init__(self, width = 0, height = 0):
@@ -18,6 +20,20 @@ class Matrix():
                 value = 0
 
         return resultMatrix
+    
+    def multiplyWithVector(self, vector):
+
+        resultVector = Vector(vector.getSize())
+
+        value = 0
+        for y in range(self.getHeight()):
+            for x in range(self.getWidth()):
+                value += self._matrix[y][x] * vector.getValueAt(x)
+            
+            resultVector.setValueAt(x, y, value)
+            value = 0
+        
+        return resultVector
 
     def getValueAt(self, x, y):
         return self._matrix[y][x]
