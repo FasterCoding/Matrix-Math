@@ -17,8 +17,8 @@ public class Matrix {
     public Matrix multiplyWith(Matrix matrix) {
 
         int newMatrixWidth = matrix.getWidth();
-        
         int newMatrixHeight = getHeight();
+        
         Matrix resultMatrix = new Matrix(newMatrixWidth, newMatrixHeight);
 
         int value = 0;
