@@ -1,4 +1,4 @@
-from .Vector.Vector import Vector
+from Vector.Vector import Vector
 
 class Matrix():
     
@@ -30,7 +30,7 @@ class Matrix():
             for x in range(self.getWidth()):
                 value += self._matrix[y][x] * vector.getValueAt(x)
             
-            resultVector.setValueAt(x, y, value)
+            resultVector.setValueAt(x, value)
             value = 0
         
         return resultVector

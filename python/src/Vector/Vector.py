@@ -15,6 +15,6 @@ class Vector():
     def getSize(self):
         return len(self._vector)
 
-    def print():
-        for x in range(self.getWidth()):
-            print(self._matrix[y][x], end=' ')
+    def print(self):
+        for x in range(self.getSize()):
+            print(self._vector[x], end=' ')
