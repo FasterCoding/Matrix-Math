@@ -4,6 +4,7 @@
 
 images
 bin
+XDG_CACHE_HOME
 
 ### C++ ###
 # Prerequisites
